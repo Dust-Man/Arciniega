@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --color-claro: #fff;
+    --color-oscuro: #000;
+    --color-principal: #5e8fb4;  /*Colores y tipografía principales*/
+    --color-secundario: #db434c;
+    --fuente-principal:"Work Sans", sans-serifs;
+}
+*{
+    box-sizing: border-box;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--color-claro);
+    font-family: var(--fuente-principal);
+}
+.section-title{
+    font-size: 40px;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*HEADER*/
+header{
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 50px auto;
+    transition: display 0.3s ease;
+    background-color: var(--color-claro);
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    padding-left: 2rem;
+    width: 100%;
+    
+}
+.hide-header{
+    display: none;
+}
+nav{
+    width: 80vw;
+}
+nav a{
+    color:var(--color-principal);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.contenedor-logo{
+    width: 7vw;
+}
+.logo{
+    width: 100%;
+}
+.nav__lista{
+    display: flex;
+    justify-content: space-around;
+}
+.nav__lista li{
+    list-style: none;
+}
+
+.layout1, .layout2,.layout3{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-claro);
+}
+
+/*LAYOUT 1: Imagen de fondo que ocupa toda la pantalla*/
+.layout1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.l1__title{
+    font-size: 53px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.l1__caption{
+    font-size: 24px;
+    margin-top: 10px;
+}
+/*LAYOUT 2: Imagen de fondo con un grid de dos columnas*/
+.layout2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.layout2 > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.texto-medio-grande{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.texto-medio-grande span{
+    display: block;
+    margin-bottom: 20px;
+}
+.texto-medio{
+   font-size: 60px;
+   font-weight: bold;
+}
+.contenedor-de-texto{
+    width: 100%;
+    max-width: 500px;
+    font-size: 20px;
+}
+/*LAYOUT 3: Pantalla completa con un grid de tres columnas */
+.layout3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.layout3 > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.--l390vh{
+    height: 90vh;
+}
+
+/*FONDOS*/
+.--imagen-cemento-c-azul{
+    background-image: url("../img/fondos/cemento-cruz-azul.png");
+}
+.--imagen-constructores{
+    background-image: url("../img/fondos/constructores.png");
+}
+.--imagen-paredes-concreto{
+    background-image: url("../img/fondos/paredes-concreto.png");
+}
+.--imagen-bano-aesteri{
+    background-image: url("../img/bano-aesteri.png");
+}
+/*BOTONES*/
+.boton-accion{
+    color: var(--color-claro);
+    background-color: transparent;
+    border: solid 1px var(--color-claro);
+    padding: 15px 60px;
+    border-radius: 100vh;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+}
+.--accion-secundario{
+    border: solid 1px var(--color-secundario);
+    color: var(--color-secundario);
+}
+.asubbold{
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--color-claro);
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+}
+/*MODIFICADORES GENERALES*/
+.--upper{
+    text-transform: uppercase;
+}
+.--mbottom60{
+    margin-bottom: 60px;
+}
+.--bold{
+    font-weight: bold;
+}
+
+/*LANDING PAGE */
+
+/*#sucursales*/
+.contenedor-imagen-sucursales{
+    width: 100%;
+    height: 80vh;
+}
+
+.imagen-sucursales{
+    width: 100%;
+}
+.caption-sucursales{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*servicios*/
+.servicio-landing{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.servicio-aceros{
+    background-image: url("../img/perfiles.png");
+}
+.servicio-azulejos{
+    background-image: url("../img/azulejos.png");
+}
+.servicio-pavimentaciones{
+    background-image: url("../img/pavimentaciones.png");
+}
+/*clientes*/
+#clientes{
+    color: var(--color-oscuro) !important;
+}
+.contenedor-cliente{
+    width: 300px !important;
+}
+.contenedor-cliente img{
+    width: 100%;
+}
+.cliente{
+    color: var(--color-oscuro);
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+/*contacto*/
+.texto-contacto{
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 40px;
+}
+.--form-landing{
+    width: 100%;
+    padding: 50px;
+}
+.--form-landing input,.--form-landing textarea{
+    background-color: transparent;
+    border: solid 2px var(--color-claro);
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    color: var(--color-claro);
+    margin-bottom: 20px;
+    font-family: var(--fuente-principal);
+}
+.--form-landing input::placeholder, .--form-landing textarea::placeholder {
+    color: rgba(255, 255, 255,.48);
+    text-transform: uppercase;
+}
+.--form-landing textarea{
+    height: 300px;
+}
