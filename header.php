@@ -19,7 +19,7 @@
             </a><a href="">
                 <li>Noticias</li>
             </a><a href="">
-                <li>Preguntas</li>
+                <li>Preguntas f </li>
             </a>
             
         </ul>
