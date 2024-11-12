@@ -11,7 +11,7 @@
 
 <body>
     <?php
-        include("./header.php")
+        include("./header.php");
     ?>
     <main>
         <section id="hero" class="layout1 --imagen-cemento-c-azul">

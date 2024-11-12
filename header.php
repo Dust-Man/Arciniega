@@ -9,7 +9,7 @@
         <ul class="nav__lista">
             <a href="">
                 <li>Sobre nosotros</li>
-            </><a href="">
+</a><a href="./productos_1.php">
                 <li>Productos</li>
             </a><a href="sucursales.php">
                 <li>Sucursales</li>
