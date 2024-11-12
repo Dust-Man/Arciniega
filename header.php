@@ -11,15 +11,15 @@
                 <li>Sobre nosotros</li>
 </a><a href="./productos_1.php">
                 <li>Productos</li>
-            </a><a href="">
+            </a><a href="sucursales.php">
                 <li>Sucursales</li>
             </a>
             <a href="">
                 <li>Contacto</li>
-            </a><a href="">
+            </a><a href="noticias.php">
                 <li>Noticias</li>
             </a><a href="">
-                <li>Preguntas</li>
+                <li>Preguntas f </li>
             </a>
             
         </ul>
