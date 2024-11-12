@@ -94,6 +94,9 @@ nav a{
     margin-top: 10px;
     text-align: center;
 }
+.--l1-nocentrar{
+    align-items: flex-start;
+}
 /*LAYOUT 2: Imagen de fondo con un grid de dos columnas*/
 .layout2{
     display: grid;
@@ -209,6 +212,9 @@ nav a{
     font-weight: bold;
     color: var(--color-secundario);
 }
+.--color-dark{
+    color: #000;
+}
 
 /*LANDING PAGE */
 
@@ -293,7 +299,10 @@ nav a{
 .--form-landing textarea{
     height: 300px;
 }
-
+/* NOTICIAS */
+.noticias{
+    padding: 100px 0 0 30px;
+}
 /*RESPONSIVIDAD*/
 @media screen and (max-width:767px) {
     .layout2,.layout3{

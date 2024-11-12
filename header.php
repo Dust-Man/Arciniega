@@ -16,7 +16,7 @@
             </a>
             <a href="">
                 <li>Contacto</li>
-            </a><a href="">
+            </a><a href="noticias.php">
                 <li>Noticias</li>
             </a><a href="">
                 <li>Preguntas f </li>
