@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }
             }// Nueva línea para el banner
 
-    $sql = "INSERT INTO posts (title, content, banner_url) VALUES ('$title', '$content', '$banner_url')";
+    $sql = "INSERT INTO productos (nombre, descripcion, imagen) VALUES ('$title', '$content', '$banner_url')";
     if (mysqli_query($conexion, $sql)) {
         echo "simon";
     } else {

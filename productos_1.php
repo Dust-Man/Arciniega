@@ -13,14 +13,16 @@
     <?php
     include "./header.php";
     ?>
-    <div class="layout1 ">
-        <div class="grid4x4">
-            <?php
+  <div class="grid4x4">
+  <?php
             include "./php/productos-sucursal-1/paginacion_1.php";
             
 ?>
-            </div>
-        </div>
+  
+  </div>
+           
+          
+            
        
 
 </body>
