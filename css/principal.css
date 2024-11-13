@@ -76,7 +76,12 @@ nav a{
     background-repeat: no-repeat;
     color: var(--color-claro);
 }
-
+.contenedor-texto-grande{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
 /*LAYOUT 1: Imagen de fondo que ocupa toda la pantalla*/
 .layout1{
     display: flex;
@@ -308,6 +313,7 @@ nav a{
 }
 .noticias-entrada{
     display: grid;
+    width: 100%;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     border-bottom: solid 1px  rgb(185, 185, 185);
@@ -348,6 +354,13 @@ nav a{
     }
     #experiencia{
         padding: 10px;
+    }
+    .noticias-entrada{
+        grid-template-columns: 1fr !important;
+        padding: 0;
+    }
+    .noticias{
+        padding: 100px 0  !important;
     }
 }
 

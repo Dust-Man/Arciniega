@@ -19,7 +19,7 @@
         $result = mysqli_query($conexion, $sql);
 ?>
     <main>
-        <div class="layout1 --color-dark  noticias">
+        <div class=" --color-dark  noticias">
             <?php while ($post = mysqli_fetch_assoc($result)): ?>
             <article class="noticias-entrada">
                 <div>
@@ -40,7 +40,7 @@
                 </div>
 
             </article>
-            <hr>
+    
             <?php endwhile; ?>
         </div>
     </main>
