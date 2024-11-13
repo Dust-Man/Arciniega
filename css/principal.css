@@ -168,6 +168,12 @@ nav a {
 .--grua{
     background-image: url("../img/fondos/grua.jpg");
 }
+.--sucursal-matriz{
+    background-image: url("../img/sucursales/matriz.png");
+}
+.--sucursal-sur-oriente{
+    background-image: url("../img/sucursales/sur-oriente.png");
+}
 /*BOTONES*/
 .boton-accion {
   color: var(--color-claro);
@@ -223,7 +229,9 @@ nav a {
 .--color-dark {
   color: #000;
 }
-
+.--no-mbottom{
+    margin-bottom: 0;
+}
 /*LANDING PAGE */
 
 /*#sucursales*/
@@ -331,6 +339,18 @@ nav a {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+/*MAPAS*/
+.map-container{
+    width: 100%;
+    height: 70vh;
+    padding: 20px;
+}
+.map-container iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
 }
 /*RESPONSIVIDAD*/
 @media screen and (max-width:767px) {
