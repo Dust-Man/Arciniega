@@ -79,7 +79,12 @@ nav a {
   background-repeat: no-repeat;
   color: var(--color-claro);
 }
-
+.contenedor-texto-grande{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
 /*LAYOUT 1: Imagen de fondo que ocupa toda la pantalla*/
 .layout1 {
   display: flex;
@@ -160,8 +165,8 @@ nav a {
 .--imagen-bano-aesteri {
   background-image: url("../img/bano-aesteri.png");
 }
-.--grua {
-  background-image: url("../img/fondos/grua.jpg");
+.--grua{
+    background-image: url("../img/fondos/grua.jpg");
 }
 /*BOTONES*/
 .boton-accion {
@@ -310,12 +315,12 @@ nav a {
   width: 100%;
   max-width: 900px;
 }
-.noticias-entrada {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  border-bottom: solid 1px rgb(185, 185, 185);
-  padding: 30px;
+.noticias-entrada{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    border-bottom: solid 1px  rgb(185, 185, 185);
+    padding: 30px;
 }
 .contenedor-imagen-entrada-noticia {
   width: 300px;
@@ -328,36 +333,31 @@ nav a {
   border-radius: 10px;
 }
 /*RESPONSIVIDAD*/
-@media screen and (max-width: 767px) {
-  .layout2,
-  .layout3 {
-    grid-template-columns: 1fr;
-    min-height: 100vh;
-    height: unset;
-  }
-  .servicio-aceros,
-  .servicio-azulejos,
-  .servicio-pavimentaciones {
-    height: 100vh !important;
-  }
-  .cliente {
-    min-height: 70vh !important;
-  }
-  .imagen-sucursales {
-    height: 100%;
-    object-fit: cover;
-  }
-  .boton-accion {
-    text-align: center;
-  }
-  .--form-landing input,
-  .--form-landing textarea {
-    width: 100%;
-  }
-  #experiencia {
-    padding: 10px;
-  }
-
+@media screen and (max-width:767px) {
+    .layout2,.layout3{
+        grid-template-columns: 1fr;
+        min-height: 100vh;
+        height: unset;
+    }
+    .servicio-aceros,.servicio-azulejos,.servicio-pavimentaciones{
+        height: 100vh !important;
+    }
+    .cliente{
+        min-height: 70vh !important;
+    }
+    .imagen-sucursales{
+        height: 100%;
+        object-fit: cover;
+    }
+    .boton-accion{
+        text-align: center;
+    }
+    .--form-landing input,.--form-landing textarea{
+        width: 100%;
+    }
+    #experiencia{
+        padding: 10px;
+    }
 }
 
 /* Cards para los produtos  PRUEBA*/

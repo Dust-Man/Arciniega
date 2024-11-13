@@ -35,17 +35,7 @@
 
             </div>
         </section>
-
-        <section id="sucursales">
-            <div class="contenedor-imagen-sucursales">
-                <img class="imagen-sucursales" src="./img/sucursalazulejos.png" alt="Baños y azulejos Arciniega">
-            </div>
-
-            <div class="caption-sucursales">
-                <a href="" class="boton-accion --accion-secundario --bold">conoce nuestras sucursales</a>
-            </div>
-        </section>
-
+        <h2 class="section-title">Nuestros Servicios</h2>
         <section id="#servicios" class="layout3">
             <div class="servicio-landing servicio-aceros">
                 <a href="" class="asubbold">Aceros, perfiles y<br> materiales de <br>construcción</a>
@@ -57,6 +47,18 @@
                 <a href="" class="asubbold">Construcciones y <br> pavimentaciones</a>
             </div>
         </section>
+        <section id="sucursales">
+            <div class="caption-sucursales">
+                <a href="" class="boton-accion --accion-secundario --bold">conoce nuestras sucursales</a>
+            </div>
+            <div class="contenedor-imagen-sucursales">
+                <img class="imagen-sucursales" src="./img/sucursalazulejos.png" alt="Baños y azulejos Arciniega">
+            </div>
+
+            
+            
+        </section>
+        
         <section id="clientes">
             <h2 class="section-title">Nuestros clientes</h2>
             <div class="layout3 --l390vh">

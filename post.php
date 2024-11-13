@@ -17,12 +17,16 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($post['title']); ?></title>
+    <link rel="stylesheet" href="./css/principal.css">
 </head>
 <body>
-    <h1><?php echo htmlspecialchars($post['title']); ?></h1>
-    <p><em>Publicado el <?php echo $post['created_at']; ?></em></p>
-    <p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
-    <a href="noticias.php">Volver al blog</a>
+    <?php include 'header.php'; ?>
+    <div class="contenedor-texto-grande">
+        <h1><?php echo htmlspecialchars($post['title']); ?></h1>
+        <p><em>Publicado el <?php echo $post['created_at']; ?></em></p>
+        <p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
+        <a href="noticias.php">Volver al blog</a>
+    </div>
 </body>
 </html>
 
