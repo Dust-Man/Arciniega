@@ -154,8 +154,8 @@ nav a{
 .--imagen-bano-aesteri{
     background-image: url("../img/bano-aesteri.png");
 }
-.--grua{
-    background-image: url("../img/fondos/grua.jpg");
+.--sucursal{
+    background-image: url("../img/fondos/sucursal.jpg");
 }
 /*BOTONES*/
 .boton-accion{
