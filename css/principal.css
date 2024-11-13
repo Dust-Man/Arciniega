@@ -162,8 +162,8 @@ nav a{
 .--imagen-bano-aesteri{
     background-image: url("../img/bano-aesteri.png");
 }
-.--grua{
-    background-image: url("../img/fondos/grua.jpg");
+.--sucursal{
+    background-image: url("../img/fondos/sucursal.jpg");
 }
 /*BOTONES*/
 .boton-accion{
@@ -467,4 +467,12 @@ nav a{
 .pagination a:hover:not(.active) {
     background-color: red;
     color: white;
+}
+/* Estilos pára el icono de las cards */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
 }
