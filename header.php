@@ -9,14 +9,14 @@
         <ul class="nav__lista">
             <a href="">
                 <li>Sobre nosotros</li>
-            </><a href="">
+</a><a href="./productos_1.php">
                 <li>Productos</li>
             </a><a href="sucursales.php">
                 <li>Sucursales</li>
             </a>
             <a href="">
                 <li>Contacto</li>
-            </a><a href="">
+            </a><a href="noticias.php">
                 <li>Noticias</li>
             </a><a href="">
                 <li>Preguntas f </li>

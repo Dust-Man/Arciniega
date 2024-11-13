@@ -94,6 +94,9 @@ nav a{
     margin-top: 10px;
     text-align: center;
 }
+.--l1-nocentrar{
+    align-items: flex-start;
+}
 /*LAYOUT 2: Imagen de fondo con un grid de dos columnas*/
 .layout2{
     display: grid;
@@ -209,6 +212,9 @@ nav a{
     font-weight: bold;
     color: var(--color-secundario);
 }
+.--color-dark{
+    color: #000;
+}
 
 /*LANDING PAGE */
 
@@ -293,7 +299,30 @@ nav a{
 .--form-landing textarea{
     height: 300px;
 }
-
+/* NOTICIAS */
+.noticias{
+    padding: 100px 0 0 30px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px ;
+}
+.noticias-entrada{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    border-bottom: solid 1px  rgb(185, 185, 185);
+    padding: 30px;
+}
+.contenedor-imagen-entrada-noticia{
+    width: 300px;
+    height: 200px;
+}
+.imagen-entrada-noticia{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 /*RESPONSIVIDAD*/
 @media screen and (max-width:767px) {
     .layout2,.layout3{
@@ -328,203 +357,109 @@ nav a{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 100px;
 }
-.productos-contenedor-principal{
-    
-}
-.card p {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #666;
+/* From Uiverse.io by Creatlydev */ 
+.card {
+    margin: auto;
+    width: min(300px, 100%);
+    background-color: #fefefe;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: #141417;
   }
-  
-  .card p.small {
-    font-size: 14px;
+  .card__hero {
+    background-color: #fef4e2;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1.5rem;
+    font-size: 0.875rem;
   }
-  
-  .go-corner {
+  .card__hero .card__job-title {
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-right: 2rem;
+  }
+  .card__hero-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    background-color: #00838d;
-    border-radius: 0 4px 0 32px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    font-weight: 700;
   }
-  
-  .go-arrow {
-    margin-top: -4px;
-    margin-right: -4px;
-    color: white;
-    font-family: courier, sans;
-  }
-  
-  .card1 {
-    display: block;
-    position: relative;
-    max-width: 262px;
-    background-color: #f2f8f9;
-    border-radius: 4px;
-    padding: 32px 24px;
-    margin: 12px;
-    text-decoration: none;
-    z-index: 0;
-    overflow: hidden;
-  }
-  
-  .card1:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -16px;
-    right: -16px;
-    background: #00838d;
-    height: 32px;
-    width: 32px;
-    border-radius: 32px;
-    transform: scale(1);
-    transform-origin: 50% 50%;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .card1:hover:before {
-    transform: scale(21);
-  }
-  
-  .card1:hover p {
-    transition: all 0.3s ease-out;
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .card1:hover h3 {
-    transition: all 0.3s ease-out;
-    color: #fff;
-  }
-  
-  .card2 {
-    display: block;
-    top: 0px;
-    position: relative;
-    max-width: 262px;
-    background-color: #f2f8f9;
-    border-radius: 4px;
-    padding: 32px 24px;
-    margin: 12px;
-    text-decoration: none;
-    z-index: 0;
-    overflow: hidden;
-    border: 1px solid #f2f8f9;
-  }
-  
-  .card2:hover {
-    transition: all 0.2s ease-out;
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-    top: -4px;
-    border: 1px solid #ccc;
-    background-color: white;
-  }
-  
-  .card2:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -16px;
-    right: -16px;
-    background: #00838d;
-    height: 32px;
-    width: 32px;
-    border-radius: 32px;
-    transform: scale(2);
-    transform-origin: 50% 50%;
-    transition: transform 0.15s ease-out;
-  }
-  
-  .card2:hover:before {
-    transform: scale(2.15);
-  }
-  
-  .card3 {
-    display: block;
-    top: 0px;
-    position: relative;
-    max-width: 262px;
-    background-color: #f2f8f9;
-    border-radius: 4px;
-    padding: 32px 24px;
-    margin: 12px;
-    text-decoration: none;
-    overflow: hidden;
-    border: 1px solid #f2f8f9;
-  }
-  
-  .card3 .go-corner {
-    opacity: 0.7;
-  }
-  
-  .card3:hover {
-    border: 1px solid #00838d;
-    box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
-    z-index: 500;
-  }
-  
-  .card3:hover p {
-    color: #00838d;
-  }
-  
-  .card3:hover .go-corner {
-    transition: opactiy 0.3s linear;
-    opacity: 1;
-  }
-  
-  .card4 {
-    display: block;
-    top: 0px;
-    position: relative;
-    max-width: 262px;
-    background-color: #fff;
-    border-radius: 4px;
-    padding: 32px 24px;
-    margin: 12px;
-    text-decoration: none;
-    overflow: hidden;
-    border: 1px solid #ccc;
-  }
-  
-  .card4 .go-corner {
-    background-color: #00838d;
-    height: 100%;
-    width: 16px;
-    padding-right: 9px;
-    border-radius: 0;
-    transform: skew(6deg);
-    margin-right: -36px;
+  .card__footer {
+    display: flex;
+    justify-content: flex-start;
     align-items: start;
-    background-image: linear-gradient(-45deg, #8f479a 1%, #dc2a74 100%);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0.75rem;
+    row-gap: 1rem;
+    font-weight: 700;
+    font-size: 0.875rem;
   }
-  
-  .card4 .go-arrow {
-    transform: skew(-6deg);
-    margin-left: -2px;
-    margin-top: 9px;
-    opacity: 0;
+  @media (min-width: 340px) {
+    .card__footer {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
   }
-  
-  .card4:hover {
-    border: 1px solid #cd3d73;
+  .card__job-summary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
   }
-  
-  .card4 h3 {
-    margin-top: 8px;
+  .card__btn {
+    width: 100%;
+    font-weight: 400;
+    border: none;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5rem 1.25rem;
+    border-radius: 1rem;
+    background-color: #141417;
+    color: #fff;
+    font-size: 1rem;
   }
-  
-  .card4:hover .go-corner {
-    margin-right: -12px;
+  @media (min-width: 340px) {
+    .card__btn {
+      width: max-content;
+    }
   }
-  
-  .card4:hover .go-arrow {
-    opacity: 1;
-  }
+  /* Estilos a para paginacion */
+  .pagination {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: blue;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: red;
+    color: white;
+}
+/* Estilos pára el icono de las cards */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
