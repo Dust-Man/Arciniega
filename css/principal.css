@@ -452,8 +452,9 @@ nav a {
   
   .pagination a:hover:not(.active) {
     background-color:  #cc1602;
-    color: white;/* Estilos pára el icono de las cards */
+    color: white;
   }
+    /* Estilos pára el icono de las cards */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
 }

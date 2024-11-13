@@ -13,33 +13,33 @@ $resultset = mysqli_query($conexion, $sql) or die("Database error: " . mysqli_er
 
 <!-- Sección para mostrar los resultados -->
 <?php while ($record = mysqli_fetch_assoc($resultset)) { ?>
-  
-<div class="card">
+
+  <div class="card">
     <div class="card-image">
- <img src="<?php
- echo $record['imagen'];
- 
- ?>" alt="">
+      <img src="<?php
+                echo $record['imagen'];
+
+                ?>" alt="">
 
 
     </div>
-    <div class="category"> 
-    <?php
-     echo $record['categoria'];
-    ?>
-  </div>
-    <div class="heading"> 
-    <?php
-     echo $record['nombre'];
-    ?>
-        <div class="author">  
+    <div class="category">
+      <?php
+      echo $record['categoria'];
+      ?>
+    </div>
+    <div class="heading">
+      <?php
+      echo $record['nombre'];
+      ?>
+      <div class="author">
         <?php
-     echo $record['descripcion'];
-    ?>
-        </div>
+        echo $record['descripcion'];
+        ?>
+      </div>
     </div>
-</div>
-  
+  </div>
+
 
 <?php } ?>
 
