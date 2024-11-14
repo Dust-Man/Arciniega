@@ -79,11 +79,11 @@ nav a {
   background-repeat: no-repeat;
   color: var(--color-claro);
 }
-.contenedor-texto-grande{
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding-top: 150px;
+.contenedor-texto-grande {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 150px;
 }
 /*LAYOUT 1: Imagen de fondo que ocupa toda la pantalla*/
 .layout1 {
@@ -165,14 +165,14 @@ nav a {
 .--imagen-bano-aesteri {
   background-image: url("../img/bano-aesteri.png");
 }
-.--grua{
-    background-image: url("../img/fondos/grua.jpg");
+.--grua {
+  background-image: url("../img/fondos/grua.jpg");
 }
-.--sucursal-matriz{
-    background-image: url("../img/sucursales/matriz.png");
+.--sucursal-matriz {
+  background-image: url("../img/sucursales/matriz.png");
 }
-.--sucursal-sur-oriente{
-    background-image: url("../img/sucursales/sur-oriente.png");
+.--sucursal-sur-oriente {
+  background-image: url("../img/sucursales/sur-oriente.png");
 }
 /*BOTONES*/
 .boton-accion {
@@ -229,8 +229,8 @@ nav a {
 .--color-dark {
   color: #000;
 }
-.--no-mbottom{
-    margin-bottom: 0;
+.--no-mbottom {
+  margin-bottom: 0;
 }
 /*LANDING PAGE */
 
@@ -323,12 +323,12 @@ nav a {
   width: 100%;
   max-width: 900px;
 }
-.noticias-entrada{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    border-bottom: solid 1px  rgb(185, 185, 185);
-    padding: 30px;
+.noticias-entrada {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  border-bottom: solid 1px rgb(185, 185, 185);
+  padding: 30px;
 }
 .contenedor-imagen-entrada-noticia {
   width: 300px;
@@ -341,140 +341,171 @@ nav a {
   border-radius: 10px;
 }
 /*MAPAS*/
-.map-container{
-    width: 100%;
-    height: 70vh;
-    padding: 20px;
+.map-container {
+  width: 100%;
+  height: 70vh;
+  padding: 20px;
 }
-.map-container iframe{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    border: none;
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: none;
 }
 /*RESPONSIVIDAD*/
-@media screen and (max-width:767px) {
-    .layout2,.layout3{
-        grid-template-columns: 1fr;
-        min-height: 100vh;
-        height: unset;
-    }
-    .servicio-aceros,.servicio-azulejos,.servicio-pavimentaciones{
-        height: 100vh !important;
-    }
-    .cliente{
-        min-height: 70vh !important;
-    }
-    .imagen-sucursales{
-        height: 100%;
-        object-fit: cover;
-    }
-    .boton-accion{
-        text-align: center;
-    }
-    .--form-landing input,.--form-landing textarea{
-        width: 100%;
-    }
-    #experiencia{
-        padding: 10px;
-    }
+@media screen and (max-width: 767px) {
+  .layout2,
+  .layout3 {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    height: unset;
+  }
+  .servicio-aceros,
+  .servicio-azulejos,
+  .servicio-pavimentaciones {
+    height: 100vh !important;
+  }
+  .cliente {
+    min-height: 70vh !important;
+  }
+  .imagen-sucursales {
+    height: 100%;
+    object-fit: cover;
+  }
+  .boton-accion {
+    text-align: center;
+  }
+  .--form-landing input,
+  .--form-landing textarea {
+    width: 100%;
+  }
+  #experiencia {
+    padding: 10px;
+  }
 }
-
-/* Cards para los produtos  PRUEBA*/
+/* Estilos cards  */
 .grid4x4 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 115px;
 }
-/* From Uiverse.io by alexmaracinaru */ 
+
+@media (max-width: 1024px) {
+  .grid4x4 {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid4x4 {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid4x4 {
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .card {
-    width: 200px;
-    background: white;
-    padding: .4em;
-    border-radius: 6px;
-  }
-  
-  .card-image {
-    background-color: rgb(236, 236, 236);
-    width: 100%;
-    height: 130px;
-    border-radius: 6px 6px 0 0;
-    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
-  }
-  
-  .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin distorsión */
-    object-position: center; /* Centra la imagen dentro del contenedor */
-    display: block; /* Elimina espacios blancos en algunos navegadores */
-    border-radius: 6px 6px 0 0; /* Asegura que la imagen también tenga bordes redondeados */
-  }
-  
+  background: white;
+  padding: 1em;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow*/
+  transition: transform 0.3s, box-shadow 0.3s; /* Animacion  dld */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 200px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Texto  cards */
+.category {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+.heading {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 12px;
+  padding-top: 15px;
+}
+
+@media (max-width: 480px) {
   .category {
-    text-transform: uppercase;
     font-size: 0.7em;
-    font-weight: 600;
-    color: rgb(63, 121, 230);
-    padding: 10px 7px 0;
   }
-  
-  .category:hover {
-    cursor: pointer;
-  }
-  
-  .heading {
-    font-weight: 600;
-    color: rgb(88, 87, 87);
-    padding: 7px;
-  }
-  
-  .heading:hover {
-    cursor: pointer;
-  }
-  
+
   .author {
-    color: gray;
-    font-weight: 400;
-    font-size: 11px;
-    padding-top: 20px;
+    font-size: 10px;
   }
-  
-  .name {
-    font-weight: 600;
-  }
-  
-  .name:hover {
-    cursor: pointer;
-  }
-  
-/* Estilos a para paginacion */
+}
+
+/* Estilos para la paginación */
 .pagination {
-    grid-column: 1 / -1; /* Hace que la paginación ocupe todo el ancho */
-    display: flex; /* Cambiar a flexbox para centrar los elementos */
-    justify-content: center; /* Centra la paginación horizontalmente */
-    margin-top: 20px;
-  }
-  
-  .pagination a {
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    border-radius: 4px; /* Opcional: añade un toque de estilo */
-    margin: 0 5px; /* Espacio entre los botones de paginación */
-  }
-  
-  .pagination a.active {
-    background-color: #0e8abb;
-    color: white;
-  }
-  
-  .pagination a:hover:not(.active) {
-    background-color:  #cc1602;
-    color: white;
-  }
-    /* Estilos pára el icono de las cards */
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.pagination a.active {
+  background-color: #0e8abb;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #cc1602;
+  color: white;
 }

@@ -2,7 +2,7 @@
 // Base de datos
 include 'php/conexion.php';
 // Configuración de la paginación
-$elementosPorPagina = 12;
+$elementosPorPagina = 10;
 $paginaActual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 $inicio = ($paginaActual - 1) * $elementosPorPagina;
 
