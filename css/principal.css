@@ -24,6 +24,32 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+.dev-msg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 1rem .5rem;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 40px;
+    position: fixed;
+    top: 100px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 9999; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #fda307;
+}
+.mensaje_hidden{
+    display: none;
+}
+#cerrar-mensaje{
+    cursor: pointer;
+    padding: 5px;
+}
 
 /*HEADER*/
 header {
@@ -135,6 +161,7 @@ nav a {
   width: 100%;
   max-width: 500px;
   font-size: 20px;
+  padding: 10px;
 }
 /*LAYOUT 3: Pantalla completa con un grid de tres columnas */
 .layout3 {
@@ -168,11 +195,17 @@ nav a {
 .--grua{
     background-image: url("../img/fondos/grua.jpg");
 }
+.--sucursal{
+  background-image: url("../img/fondos/sucursal.jpg");
+}
 .--sucursal-matriz{
     background-image: url("../img/sucursales/matriz.png");
 }
 .--sucursal-sur-oriente{
-    background-image: url("../img/sucursales/sur-oriente.png");
+  background-image: url("../img/sucursales/sur-oriente.png");
+}
+.--sucursal-azujelos{
+  background-image: url("../img/sucursales/azulejos.png");
 }
 /*BOTONES*/
 .boton-accion {
@@ -231,6 +264,19 @@ nav a {
 }
 .--no-mbottom{
     margin-bottom: 0;
+}
+.--100ptop{
+  padding-top: 100px;
+}
+.cont-img-100per{
+  width: 100%;
+  height: 50vh;
+} 
+.cont-img-100per img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 /*LANDING PAGE */
 
@@ -377,6 +423,16 @@ nav a {
     }
     #experiencia{
         padding: 10px;
+    }
+    .noticias-entrada{
+      grid-template-columns: 1fr;
+    }
+    .noticias{
+      padding: 10px;
+      padding-top: 60px;
+    }
+    .--100ptop{
+      padding-top: 100px;
     }
 }
 

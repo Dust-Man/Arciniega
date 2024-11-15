@@ -21,13 +21,20 @@ if (isset($_GET['id'])) {
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div class="contenedor-texto-grande">
-        <h1><?php echo htmlspecialchars($post['title']); ?></h1>
-        <p><em>Publicado el <?php echo $post['created_at']; ?></em></p>
+    <div class="noticias --100ptop">
+    <h1><?php echo htmlspecialchars($post['title']); ?></h1>
+    <p><em>Publicado el <?php echo $post['created_at']; ?></em></p>
+    
+        <div class="cont-img-100per">
+            <?php echo "<img src='".$post['banner_url']."'>" ?>
+        </div>
+        
         <p><?php echo nl2br(htmlspecialchars($post['content'])); ?></p>
         <a href="noticias.php">Volver al blog</a>
     </div>
 </body>
+<script src="./scripts/header.js"></script>
+<script src="./scripts/mensajes.js"></script>
 </html>
 
 <?php

@@ -35,6 +35,7 @@
 
             </div>
         </section>
+        <div class='dev-msg' id='mensaje'><span>Este es un comentario de desarrollador</span><span id='cerrar-mensaje'>X</span></div>
         <h2 class="section-title">Nuestros Servicios</h2>
         <section id="#servicios" class="layout3">
             <div class="servicio-landing servicio-aceros">
@@ -101,5 +102,6 @@
     </main>
 </body>
 <script src="./scripts/header.js"></script>
+<script src="./scripts/mensajes.js"></script>
 
 </html>
