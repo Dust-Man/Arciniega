@@ -1,78 +1,61 @@
 <?php
-// Base de datos
-include 'php/conexion.php';
+include '../conexion.php';
+
 // Configuración de la paginación
-$elementosPorPagina = 10;
+$elementosPorPagina = 12;
 $paginaActual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 $inicio = ($paginaActual - 1) * $elementosPorPagina;
 
-// Consulta para obtener los productos con límite y paginación
-$sql = "SELECT * FROM productos ORDER BY producto_id ASC LIMIT $inicio, $elementosPorPagina";
-$resultset = mysqli_query($conexion, $sql) or die("Database error: " . mysqli_error($conexion));
-?>
+$busqueda = isset($_GET['search']) ? mysqli_real_escape_string($conexion, trim($_GET['search'])) : '';
 
-<!-- Sección para mostrar los resultados -->
-<?php while ($record = mysqli_fetch_assoc($resultset)) { ?>
+$filtroBusqueda = '';
+if (!empty($busqueda)) {
+// Aqui se ajusta cuantos caracteres se tomaran de la busqueda
+    if (strlen($busqueda) > 0) {
+        $filtroBusqueda = " WHERE nombre LIKE '%$busqueda%' OR categoria LIKE '%$busqueda%'";
+    }
+}
 
-  <div class="card">
- 
-    <div class="card-image">
-      <img src="<?php
-                echo $record['imagen'];
+$sql = "SELECT DISTINCT * FROM productos 
+        $filtroBusqueda 
+        ORDER BY producto_id ASC 
+        LIMIT $inicio, $elementosPorPagina";
 
-                ?>" alt="">
+$resultset = mysqli_query($conexion, $sql);
 
+if (!$resultset) {
+    echo json_encode(['error' => "Database error: " . mysqli_error($conexion)]);
+    exit;
+}
 
-    </div>
-    <div class="category">
-      <?php
-      echo $record['categoria'];
-      ?>
-    </div>
-    <div class="heading">
-      <?php
-      echo $record['nombre'];
-      ?>
-      <div class="author">
-        <?php
-        echo $record['descripcion'];
-        ?>
-      </div>
-    </div>
-  </div>
+$productos = [];
+while ($record = mysqli_fetch_assoc($resultset)) {
+    // Calcular la distancia Levenshtein con el término de búsqueda
+    $record['distancia'] = levenshtein(strtolower($record['nombre']), strtolower($busqueda));
+    $productos[] = $record;
+}
 
+usort($productos, function($a, $b) {
+    return $a['distancia'] - $b['distancia'];
+});
 
-<?php } ?>
+$sqlTotal = "SELECT COUNT(DISTINCT producto_id) as total FROM productos $filtroBusqueda";
+$resultTotal = mysqli_query($conexion, $sqlTotal);
 
-<div class="pagination">
-  <!-- Sección de paginación -->
-  <?php
-  // Consulta para contar el total de elementos en la tabla de productos
-  $sqlTotal = "SELECT COUNT(*) as total FROM productos";
-  $resultTotal = mysqli_query($conexion, $sqlTotal);
-  $filaTotal = mysqli_fetch_assoc($resultTotal);
-  $totalElementos = $filaTotal['total'];
-  $totalPaginas = ceil($totalElementos / $elementosPorPagina);
+if (!$resultTotal) {
+    echo json_encode(['error' => "Database error: " . mysqli_error($conexion)]);
+    exit;
+}
 
-  // Enlace a la página anterior
-  if ($paginaActual > 1) {
-    echo "<a href='?pagina=" . ($paginaActual - 1) . "'>&laquo; Anterior</a> ";
-  }
+$filaTotal = mysqli_fetch_assoc($resultTotal);
+$totalElementos = $filaTotal['total'];
+$totalPaginas = ceil($totalElementos / $elementosPorPagina);
 
-  // Enlaces para todas las páginas
-  for ($i = 1; $i <= $totalPaginas; $i++) {
-    $claseActiva = ($i == $paginaActual) ? 'active' : '';
-    echo "<a class='$claseActiva' href='?pagina=$i'>$i</a> ";
-  }
+// Enviar los datos como respuesta JSON
+echo json_encode([
+    'productos' => $productos,
+    'totalPaginas' => $totalPaginas
+]);
 
-  // Enlace a la página siguiente
-  if ($paginaActual < $totalPaginas) {
-    echo "<a href='?pagina=" . ($paginaActual + 1) . "'>Siguiente &raquo;</a> ";
-  }
-  ?>
-</div>
-
-<?php
-// Cerrar la conexión a la base de datos
 mysqli_close($conexion);
 ?>
