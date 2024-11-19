@@ -15,7 +15,7 @@
     ?>
   <div class="grid4x4">
   <?php
-            include "./php/productos-sucursal-1/paginacion_1.php";
+            include "php/productos-sucursal-1/paginacion_1.php";
             
 ?>
   

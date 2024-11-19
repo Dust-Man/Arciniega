@@ -15,6 +15,7 @@ $resultset = mysqli_query($conexion, $sql) or die("Database error: " . mysqli_er
 <?php while ($record = mysqli_fetch_assoc($resultset)) { ?>
 
   <div class="card">
+ 
     <div class="card-image">
       <img src="<?php
                 echo $record['imagen'];
