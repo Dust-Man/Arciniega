@@ -35,6 +35,7 @@
 
             </div>
         </section>
+
         <h2 class="section-title">Nuestros Servicios</h2>
         <section id="#servicios" class="layout3">
             <div class="servicio-landing servicio-aceros">
@@ -81,8 +82,8 @@
                     <div class="contenedor-cliente">
                         <img src="./img/cliente3.png" alt="Cliente 1">
                     </div>
-                        <p class="--resalte-secundario">"DJ tilin insano 4000"</p>
-                        <p>"Gracias a ellos construí mi discoteca" <br> </p>
+                        <p class="--resalte-secundario">"Said Alcantara"</p>
+                        <p>"Envíos a tiempo y mucho profesionalismo" <br> </p>
                     
                 </div>
 
@@ -101,5 +102,6 @@
     </main>
 </body>
 <script src="./scripts/header.js"></script>
+<script src="./scripts/mensajes.js"></script>
 
 </html>

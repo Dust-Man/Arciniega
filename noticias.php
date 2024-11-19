@@ -19,6 +19,7 @@
         $result = mysqli_query($conexion, $sql);
 ?>
     <main>
+    <div class='dev-msg' id='mensaje'><span>Este es un comentario de desarrollador. Esta es la sección de noticias, funciona como un blog editable, al que solo podrán publicar los administradores con permiso en el panel de trabajadores. Si quiere publicar un post, haga clic <a href="create-post.php">aquí</a></span><span id='cerrar-mensaje'>X</span></div>
         <div class=" --color-dark  noticias">
             <?php while ($post = mysqli_fetch_assoc($result)): ?>
             <article class="noticias-entrada">
@@ -45,5 +46,7 @@
         </div>
     </main>
 </body>
+<script src="./scripts/header.js"></script>
+<script src="./scripts/mensajes.js"></script>
 
 </html>

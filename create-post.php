@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "INSERT INTO posts (title, content, banner_url) VALUES ('$title', '$content', '$banner_url')";
     if (mysqli_query($conexion, $sql)) {
-        echo "simon";
+        header("index.php");
     } else {
         echo "Error: " . mysqli_error($conexion);
     }
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <h1>Crear Nuevo Artículo</h1>
-    <form action="create.php" method="POST" enctype="multipart/form-data">
+    <form action="create-post.php" method="POST" enctype="multipart/form-data">
         <label for="title">Título:</label>
         <input type="text" id="title" name="title" required>
         
@@ -48,5 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <button type="submit">Guardar</button>
     </form>
+    <a href="noticias.php">Regresar a la sección de noticias</a>
 </body>
 </html>
