@@ -402,7 +402,7 @@ nav a {
   display: flex;
   padding: 115px;
   padding-bottom: 2px;
-  grid-template-columns: repeat(, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
 .form {
   --timing: 0.3s;
@@ -423,7 +423,6 @@ nav a {
   transition: border-radius 0.5s ease;
   background: var(--input-bg, #fff);
 }
-/* styling of Input */
 .input {
   font-size: 0.9rem;
   background-color: transparent;
